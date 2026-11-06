@@ -1,0 +1,151 @@
+{
+  "audit": {
+    "train": {
+      "shape": [
+        20631,
+        26
+      ],
+      "missing_by_column": {
+        "unit_number": 0,
+        "time_in_cycles": 0,
+        "op_setting_1": 0,
+        "op_setting_2": 0,
+        "op_setting_3": 0,
+        "sensor_1": 0,
+        "sensor_2": 0,
+        "sensor_3": 0,
+        "sensor_4": 0,
+        "sensor_5": 0,
+        "sensor_6": 0,
+        "sensor_7": 0,
+        "sensor_8": 0,
+        "sensor_9": 0,
+        "sensor_10": 0,
+        "sensor_11": 0,
+        "sensor_12": 0,
+        "sensor_13": 0,
+        "sensor_14": 0,
+        "sensor_15": 0,
+        "sensor_16": 0,
+        "sensor_17": 0,
+        "sensor_18": 0,
+        "sensor_19": 0,
+        "sensor_20": 0,
+        "sensor_21": 0
+      },
+      "duplicate_rows": 0
+    },
+    "test": {
+      "shape": [
+        13096,
+        26
+      ],
+      "missing_by_column": {
+        "unit_number": 0,
+        "time_in_cycles": 0,
+        "op_setting_1": 0,
+        "op_setting_2": 0,
+        "op_setting_3": 0,
+        "sensor_1": 0,
+        "sensor_2": 0,
+        "sensor_3": 0,
+        "sensor_4": 0,
+        "sensor_5": 0,
+        "sensor_6": 0,
+        "sensor_7": 0,
+        "sensor_8": 0,
+        "sensor_9": 0,
+        "sensor_10": 0,
+        "sensor_11": 0,
+        "sensor_12": 0,
+        "sensor_13": 0,
+        "sensor_14": 0,
+        "sensor_15": 0,
+        "sensor_16": 0,
+        "sensor_17": 0,
+        "sensor_18": 0,
+        "sensor_19": 0,
+        "sensor_20": 0,
+        "sensor_21": 0
+      },
+      "duplicate_rows": 0
+    },
+    "constant_sensors_removed": [
+      "sensor_1",
+      "sensor_5",
+      "sensor_10",
+      "sensor_16",
+      "sensor_18",
+      "sensor_19"
+    ],
+    "iqr_outlier_counts_train": {
+      "sensor_2": 128,
+      "sensor_3": 165,
+      "sensor_4": 120,
+      "sensor_6": 406,
+      "sensor_7": 110,
+      "sensor_8": 320,
+      "sensor_9": 1686,
+      "sensor_11": 167,
+      "sensor_12": 146,
+      "sensor_13": 161,
+      "sensor_14": 1543,
+      "sensor_15": 120,
+      "sensor_17": 81,
+      "sensor_20": 117,
+      "sensor_21": 136
+    },
+    "unit_conversion": "No se convierten unidades: C-MAPSS entrega settings y sensores en escalas propias del simulador; no se proporcionan aquí unidades SI verificadas. No se inventan conversiones. La estandarización se aplica dentro de pipelines solo cuando el modelo lo requiere."
+  },
+  "features": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "best_model": "RandomForest_tuned",
+  "best_params": {
+    "model__max_depth": 12,
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 300
+  },
+  "validation": {
+    "RandomForest_tuned": {
+      "MAE": 12.290675059988306,
+      "RMSE": 16.973854664639692,
+      "R2": 0.8344372016760334,
+      "NASA_score": 32410.665283562917
+    },
+    "LinearRegression": {
+      "MAE": 15.118657877902777,
+      "RMSE": 19.882671303554005,
+      "R2": 0.7728298496819567,
+      "NASA_score": 27634.248561311986
+    },
+    "HistGradientBoosting": {
+      "MAE": 12.317886202364958,
+      "RMSE": 16.987066444605578,
+      "R2": 0.8341793662473508,
+      "NASA_score": 32269.045836976646
+    }
+  },
+  "official_test": {
+    "MAE": 12.852192134519361,
+    "RMSE": 17.933938807001528,
+    "R2": 0.8137519120533041,
+    "NASA_score": 905.1897005433458
+  },
+  "n_train_engines": 100,
+  "n_validation_engines": 20
+}
