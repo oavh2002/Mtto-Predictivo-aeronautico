@@ -20,11 +20,11 @@ pip install -r requirements.txt
 ```
 
 ## Datos
-Descarga el conjunto NASA C-MAPSS y coloca los tres archivos FD001 en `data/raw/`.
-No cambies sus nombres. Este repositorio no redistribuye los datos.
+Los tres archivos originales de NASA C-MAPSS (FD001) ya están incluidos en `data/raw/`.
+No cambies sus nombres. Fuente: NASA Prognostics Center of Excellence.
 
 ## Ejecución
-Desde la raíz:
+Desde la carpeta `proyecto_mantenimiento_predictivo/`:
 ```bash
 python src/pipeline.py
 streamlit run dashboard.py
